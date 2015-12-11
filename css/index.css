@@ -28,6 +28,12 @@ body {
     background-repeat: no-repeat;*/
     background-size: cover;
 }
+	#body {
+		width: 100%;
+		min-height: 700px;
+		margin-top: 50px;
+		background: url(./../pics/board.png) no-repeat center center;
+	}
 /*#header,*/
 
 #option-menu {

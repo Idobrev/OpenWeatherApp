@@ -5,7 +5,10 @@ function AwsomeEventListener(city){
         return;
     }
     var wmClient = new WMclient();
-    wmClient.sendRequest(city);
+    wmClient.sendRequest(city).done(function ( data, textStatus, jqXHR){
+		var sticker = new Sticker(data);
+		
+    });
 }
 
 $(document).ready(function(){
