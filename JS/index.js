@@ -7,7 +7,18 @@ function AwsomeEventListener(city){
     var wmClient = new WMclient();
     wmClient.sendRequest(city).done(function ( data, textStatus, jqXHR){
 		var sticker = new Sticker(data);
-		
+		//check if we have too much stickers
+		stickerCount = $('#body').children().length;
+		if (stickerCount == 4) {
+			$('#body').html('');
+		}
+		console.log($('#select').val());
+		var selectedOption = $('#select').val();
+		if (selectedOption == 0) {
+			alert('Моля изберете опция!');
+			return;
+		}
+		sticker.drawSticker(selectedOption, $('#body'));
     });
 }
 

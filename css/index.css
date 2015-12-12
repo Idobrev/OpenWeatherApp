@@ -31,10 +31,14 @@ body {
 	#body {
 		width: 100%;
 		min-height: 700px;
-		margin-top: 50px;
 		background: url(./../pics/board.png) no-repeat center center;
+		animation-delay: 2s;
+		animation-timing-function: linear;
 	}
 /*#header,*/
+	#header {
+		margin-bottom: 50px;
+	}
 
 #option-menu {
     width: 356px;
@@ -79,8 +83,8 @@ body {
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    border:1px solid red;
 }
+
 /*clearfix*/
 #header:after {
     content: '';
@@ -98,4 +102,15 @@ body {
     content: '';
     overflow: auto;
     display: block;
+}
+.sticker {
+	margin:50px;
+	width: 309px;
+	height: 306px;
+	padding: 25px 10px 0 25px;
+	color:black;
+	font-weight: bold;
+	float:left;
+	background: url(./../pics/sticker.png) no-repeat center center;
+	background-size: contain;
 }

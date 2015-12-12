@@ -1,11 +1,11 @@
 $('#select').each(function(){
     var $this = $(this), numberOfOptions = $(this).children('option').length;
-  
     $this.addClass('select-hidden'); 
     $this.wrap('<div class="select"></div>');
     $this.after('<div class="select-styled"></div>');
 
     var $styledSelect = $this.next('div.select-styled');
+	
     $styledSelect.html('<div id="selected">' + $this.children('option').eq(0).text() + '</div><div id="arrow"></div>');
   
     var $list = $('<ul />', {
@@ -36,6 +36,7 @@ $('#select').each(function(){
         e.stopPropagation();
         $("#selected").text($(this).text()).removeClass('active');
         $this.val($(this).attr('rel'));
+		$('#arrow').removeClass('arrow-active');
         $list.hide();
         //console.log($this.val());
     });
