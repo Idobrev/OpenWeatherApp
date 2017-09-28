@@ -1,2 +1,2 @@
 # OpenWeatherApp
-Yes
+Run index.html in a browser. 
