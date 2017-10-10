@@ -1,5 +1,4 @@
 function Sticker(data, targetObject) {
-	console.log(data);
 		this.dateTime = data.dt;
 		this.humidity = data.main.humidity;
 		this.pressure = data.main.pressure;
@@ -28,9 +27,8 @@ function Sticker(data, targetObject) {
 		if (index == 1) {
 			var d = new Date();
 			var n = d.toLocaleString();
-			var sunrise = new Date(this.sunrise);
-			var sunset = new Date(this.sunset);
-			
+			var sunrise = new Date(this.sunrise * 1000);
+			var sunset = new Date(this.sunset * 1000);
 			field1 = 'Текущото време: ' + n + '.<br> Изгревът започва в ' + sunrise.toLocaleString() + ', a залеза в ' + sunset.toLocaleString();
 			field2 = 'Облачност( в процент ): ' + this.clouds + '%';
 			field3 = 'Координати: дължина ' + this.latitude + '/ ширина ' + this.longtitute;
